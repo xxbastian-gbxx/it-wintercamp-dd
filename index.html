@@ -4,86 +4,107 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>fetch</title>
+    <title>POST and GET Request</title>
 </head>
 <body>
-    
-    <table>
-        <th>Information</th><th>Data</th>
-        <tbody>
-            <tr>
-                <td>Name: </td> <td id="name"></td>
-            </tr>
-            <tr>
-                <td>Gerburtsdatum: </td> <td id="birthday"></td>
-            </tr>
-            <tr>
-                <td>Ort: </td> <td id="location"></td>
-            </tr>
-            <tr>
-                <td>E-Mail: </td> <td id="mail"></td>
-            </tr>
-            <tr>
-                <td>Job: </td> <td id="job"></td>
-            </tr>
-            <tr>
-                <td>Berüßung des Mitarbeiters</td> <td><input type="checkbox" id="cl0"></input></td>
-            </tr>
-            <tr>
-                <td>Arbeitsmittel eingereicht</td> <td><input type="checkbox" id="cl1"></input></td>
-            </tr>
-            <tr>
-                <td>Am erste Meetiung teilgenommen</td> <td><input type="checkbox" id="cl2"></input></td>
-            </tr>
-            <tr>
-                <td>Onboarding-Prozess abgeschlosen</td> <td><input type="checkbox" id="cl3"></input></td>
-            </tr>
-        </tbody>
-    </table>
-    <br><br>
     <form action="">
-        <input type="text" name="" id="textfield">
-        <input type="button" value="Submit" id="btn">
+        <input type="text" id="field" placeholder="param">
+        <input type="text" id="change-field" placeholder="Changing param with">
+        <input type="button" value="Hinzufügen" id="add">
+        <input type="button" value="Entfernen" id="remove">
+        <input type="button" value="Ändern" id="change">
     </form>
-    
+
 
     <script>
-        fetch('http://localhost:8000/user')
-        .then((response) => {
-            return response.json()
-        })
-        .then((data) => {
-            document.getElementById('name').innerHTML = data.name
-            document.getElementById('birthday').innerHTML = data.birthdate
-            document.getElementById('location').innerHTML = data.location
-            document.getElementById('mail').innerHTML = data.email
-            document.getElementById('job').innerHTML = data.job
+        const text = document.getElementById('field').value
 
-            for (let i = 0; i < data.checklist.length; i++) {
-                if(data.checklist[i].isDone == true) {     
-                    document.getElementById('cl' + i).checked = true;
-                } else {
-                    document.getElementById('cl' + i).checked = false;
-                }
-            }
-        })
 
-        document.getElementById('btn').addEventListener("click", function() {
-            const data = {input : document.getElementById('textfield').value}
+        async function fetchFunc() {
+            var json = await fetch('http://localhost:8000/user')
+            .then((response) => {
+                return response.json()
+            })
+            .then((data) => {
+                return data
+            });
+            console.log(json)
+            return json;
+        }
+
+        //add a Paramenter to json
+        async function add() {
+            const text = document.getElementById('field').value
+            console.log(text)
+            const responseJson = await fetchFunc()
+            responseJson.text = text
+
+            console.log(responseJson)
 
             fetch('http://localhost:8000/user', {
                 method : 'POST',
-                body: JSON.stringify(data),
                 headers: {
-                'Content-Type': 'application/json'
-                }
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body : JSON.stringify({responseJson})
             })
-            .then(response => response.json())
-            .then(response => console.log(response))
-        })
-        
+        }
 
-        
+        document.getElementById('add').addEventListener('click', function () {
+            add()
+        })
+
+
+        //change a parameter in json
+        async function change() {
+            const text = document.getElementById('field').value
+            const changeText = document.getElementById('change-field').value
+            console.log(text)
+            const responseJson = await fetchFunc()
+            responseJson.text = changeText
+
+            console.log(responseJson)
+
+            fetch('http://localhost:8000/user', {
+                method : 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body : JSON.stringify({responseJson})
+            })
+        }
+
+        document.getElementById('change').addEventListener('click', function () {
+            change()
+        })
+
+
+
+        //remove parameter from json
+        async function remove() {
+            const text = document.getElementById('field').value
+            console.log(text)
+            const responseJson = await fetchFunc()
+            delete responseJson.text
+
+            console.log(responseJson)
+
+            fetch('http://localhost:8000/user', {
+                method : 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body : JSON.stringify({responseJson})
+            })
+        }
+
+        document.getElementById('remove').addEventListener('click', function () {
+            remove()
+        })
+
     </script>
 </body>
 </html>
