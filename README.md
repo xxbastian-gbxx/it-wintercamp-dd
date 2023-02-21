@@ -15,7 +15,6 @@ In dieser App sollen neuen Mitarbeitenden alle wichtigen Informationen und Aufga
 <h1>Ablaufplan</h1>
 <div id="pgc-gb18-63f4a5f7aded6-0-0" class="panel-grid-cell"><div id="panel-gb18-63f4a5f7aded6-0-0-0" class="so-panel widget widget_sow-editor panel-first-child" data-index="0"><div class="so-widget-sow-editor so-widget-sow-editor-base">
 <div class="siteorigin-widget-tinymce textwidget">
-	<h2 class="color-match">Ablaufplan</h2>
 </div>
 </div></div><div id="panel-gb18-63f4a5f7aded6-0-0-1" class="so-panel widget widget_sow-editor" data-index="1"><div class="so-widget-sow-editor so-widget-sow-editor-base"><h3 class="widget-title">Tag 1 </h3>
 <div class="siteorigin-widget-tinymce textwidget">
