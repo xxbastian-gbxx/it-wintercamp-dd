@@ -164,3 +164,16 @@ In dieser App sollen neuen Mitarbeitenden alle wichtigen Informationen und Aufga
 </table>
 </div>
 </div></div></div>
+
+
+
+<div width="100%" >
+<h4 id="Kooperation" class="color-match">Das Dresdener IT-Camp ist eine Kooperation von:</h4>
+
+<a href="https://www.communardo.de/"><img src="https://itcamp-dd.de/wp-content/uploads/2022/06/Communardo-Logo_RGB_hoch_transparent-1024x642.png" height="120px" width="200"></a>
+<a href="https://www.t-systems.com/de/de"><img src="https://itcamp-dd.de/wp-content/uploads/2022/06/220412_T_systemsMMS_logo_rgb_p-300x119.png" width="200" height="79"></a>
+<a href="https://www.sap.com/germany/index.html"><img src="https://itcamp-dd.de/wp-content/uploads/2022/10/SAP_R_grad_scrn-300x149.png" width="200" height="100"></a>
+</div>
+
+
+
