@@ -101,7 +101,6 @@
     }
   }
   
-
 .heading{
     font-size: 50px;
     font-weight: bold;
@@ -188,4 +187,13 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
 	background-color: #0062cc;
+}
+
+.task-1-popup {
+  display: block;
+  position: absolute;
+  background-color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
