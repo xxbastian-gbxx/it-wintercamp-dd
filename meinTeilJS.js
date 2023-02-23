@@ -7,7 +7,7 @@ var json = [
       "Telefonnummer":"+49 839 82912",
       "Email":"Tomas.Einstein@t-systems4.de",
       "Plz":"92812",
-      "OrtName":"Bushausen2",
+      "Ort_Name":"Bushausen2",
       "Strasse":"rufbushausen2",
       "Hausnummer":"10p",
       "Passwort":"1.04.2006"   
@@ -37,7 +37,7 @@ let internalFormularJson = [
         "Telefonnumber": Telefonnumbernewdata,
         "Email": Emailnewdata,
         "Plz": Plznewdata,
-        "OrtName": OrtNamenewdata,
+        "Ort_Name": OrtNamenewdata,
         "Strasse": Strassenewdata,
         "Hausnummer": Hausnummernewdata,
         "Passwort": Passwortnewdata
@@ -60,7 +60,7 @@ window.onload = function getJSONData(){
    document.getElementById("Email").innerHTML = EmailData;
    let PlzData = json[0].Plz;
    document.getElementById("Plz").innerHTML = PlzData;
-   let OrtNameData = json[0].OrtName;
+   let OrtNameData = json[0].Ort_Name;
    document.getElementById("OrtName").innerHTML = OrtNameData;
    let StrasseData = json[0].Strasse;
    document.getElementById("Strasse").innerHTML = StrasseData;
