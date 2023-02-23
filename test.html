@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Test Html für meinTeilJS.js</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    <input type="text" id="input2" placeholder="Vorname">
+    <input type="text" id="input3" placeholder="Nachname">
+    <input type="text" id="input4" placeholder="Telefonummer">
+    <input type="text" id="input5" placeholder="Email">
+    <input type="text" id="input6" placeholder="Plz">
+    <input type="text" id="input7" placeholder="OrtName">
+    <input type="text" id="input8" placeholder="Strasse">
+    <input type="text" id="input9" placeholder="Hausnummer">
+    <input type="text" id="input10" placeholder="Passwort">
+    <button id="submit">submit</button>
+<!--     <button id="test_btn">testst</button> -->
+    
+    <p>ID: </p>
+    <p id="ID"></p><br>
+    <p>Vorame: </p>
+    <p id="Vorname"></p><br>
+    <p>Nachname: </p>
+    <p id="Nachname"></p><br>
+    <p>Telefonnummer: </p>
+    <p id="Telefonnummer"></p><br>
+    <p>Email: </p>
+    <p id="Email"></p><br>
+    <p>Plz: </p>
+    <p id="Plz"></p><br>
+    <p>Ort Name: </p>
+    <p id="OrtName"></p><br>
+    <p>Strasse: </p>
+    <p id="Strasse"></p><br>
+    <p>Hausnummer: </p>
+    <p id="Hausnummer"></p><br>
+    <p>Passwort: </p>
+    <p id="Passwort"></p><br>
+    
+    <div class="frame_1">
+        <p class="title"><b>Onboarding.</b></p>
+    
+    
+        <div class="email_input">
+    
+            <input type="text" placeholder="Email" id="user_email">
+    
+        </div>
+        <div class="passwort_input">
+            <input type="password" placeholder="Passwort" id="user_password">
+        </div>
+        <div class="center_btn1">
+            <a href=""><button id="login" type="button">Login</button></a>
+        </div>
+        <div class="center_btn1">
+            <a href="https://telekom.de">Hilfe</a>
+        </div>
+    </div>
+    
+    <script src="meinTeilJS.js"></script>
+    </body>
+    </html>
+
+<!-- <script>
+    async function fetchData(id) {
+    return await fetch('t-systems_copy.php' + '?ID=' + id)
+            .then(response =>
+                  response.json())
+    }
+
+    async function testData() {
+        var json = await fetchData(2)
+        console.log(json[0])
+    }
+
+    async function addUser() {
+        var newUserData = [
+            {
+                "ID":5,
+                "Vorname":"Tomas",
+                "Nachname":"Einstein",
+                "Telefonnummer":"+49 839 82912",
+                "Email":"Tomas.Einstein@t-systems4.de",
+                "Plz":"92812",
+                "Ort_Name":"Bushausen2",
+                "Strasse":"rufbushausen2",
+                "Hausnummer":"10p",
+                "Passwort":"1.04.2006"   
+            }
+        ]
+
+        console.log(testArray)
+
+        let responseArray = await fetchData()
+        console.log(testData)
+        responseArray = responseArray + ',' + testData
+        console.log(testData)
+        console.log(responseArray)
+
+        fetch('t-systems_copy.php', {
+            method : 'GET',
+            headers: {
+                'Content-Type' : 'application/json'
+            }
+        })
+        .then((response)=>{
+                console.log(response.json())
+        })
+    }
+
+    document.getElementById('add').addEventListener('click', function () {
+            addUser()
+        })
+</script> -->
+</body>
+</html>

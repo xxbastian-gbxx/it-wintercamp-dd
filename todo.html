@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo Liste</title>
+    <link rel="stylesheet" href="todostyle.css">
+</head>
+<body>
+    <div class="hero">
+        <nav>
+          <img src="../img/img2/telekomlogo.jpeg" class="logo">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">ToDos</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Technik</a></li>
+            <li><a href="#">Dokumente</a></li>
+            <li><a href="#">FAQ und Hilfe</a></li>
+            <li><a href="https://www.telekom.com/">Telekom Website</a></li>
+          </ul>
+          <img src="../img/img/account_circle.svg" class="profil-picture">
+
+        </nav>
+        
+        <div class="heading">
+            To Do Liste
+        </div>
+
+        <div class="task">
+            <input type="checkbox" id="task1" name="task1" class="task-checkbox" onclick="return false;">
+            <div class="task-label">
+              <a href="#" class="task-title">To-Do Item 1</a>
+              <span class="task-deadline">(Deadline: 31. März 2023)</span>
+            </div>
+          </div>
+
+        <div class="task-1-popup">
+          <div class="upload-container">
+            <h1>Dokument hochladen</h1>
+            <form action="#" method="post" enctype="multipart/form-data">
+              <label for="document">Wähle ein Dokument aus:</label>
+              <input type="file" name="document" id="document">
+              <button type="submit">Hochladen</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="task">
+          <input type="checkbox" id="task2" name="task2" class="task-checkbox" onclick="return false;">
+          <div class="task-label">
+            <a href="#" class="task-title">To-Do Item 2</a>
+            <span class="task-deadline">(Deadline: 31. März 2023)</span>
+          </div>
+        </div>
+
+
+</body>
+</html>
