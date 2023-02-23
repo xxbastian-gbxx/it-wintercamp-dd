@@ -114,4 +114,33 @@ $data = fetchTableData($connection);
 var_dump($data);
 
 //TODO: Erstelle Func um json von js team auf db zu übertragen
+functiofunction unpack_json($filename) {
+  $json_str = file_get_contents($filename);
+  $userdata = json_decode($json_str, true);
+  return $userdata;
+}
+
+function import_data($filename) {
+  $userdata = unpack_json($filename);
+
+  $pdo = new PDO('mysql:host=localhost; dbname=t-systems', 'root', '', [
+      PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+  ]);
+
+  $stmt = $pdo->prepare('UPDATE `user` SET `Vorname` = :Vorname, `Nachname` = :Nachname, `Telefonnummer` = :Telefonnummer, `Email` = :Email, `Plz` = :Plz, `Ort_Name` = :Ort_Name, `Strasse` = :Strasse, `Hausnummer` = :Hausnummer, `Passwort` = :Passwort WHERE `ID` = :ID');
+
+  foreach ($userdata as $singleuserdata) {
+      $stmt->bindValue(':ID', $singleuserdata['ID']);
+      $stmt->bindValue(':Vorname', $singleuserdata['Vorname']);
+      $stmt->bindValue(':Nachname', $singleuserdata['Nachname']);
+      $stmt->bindValue(':Telefonnummer', $singleuserdata['Telefonnummer']);
+      $stmt->bindValue(':Email', $singleuserdata['Email']);
+      $stmt->bindValue(':Plz', $singleuserdata['Plz']);
+      $stmt->bindValue(':Ort_Name', $singleuserdata['Ort_Name']);
+      $stmt->bindValue(':Strasse', $singleuserdata['Strasse']);
+      $stmt->bindValue(':Hausnummer', $singleuserdata['Hausnummer']);
+      $stmt->bindValue(':Passwort', $singleuserdata['Passwort']);
+      $stmt->execute();
+  }
+}
 ?>
