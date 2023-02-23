@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToDo Liste</title>
     <link rel="stylesheet" href="todostyle.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <div class="hero">
         <nav>
-          <img src="../img/img2/telekomlogo.jpeg" class="logo">
+          <img src="../img2/telekomlogo.jpeg" class="logo">
           <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">ToDos</a></li>
@@ -20,7 +21,7 @@
             <li><a href="#">FAQ und Hilfe</a></li>
             <li><a href="https://www.telekom.com/">Telekom Website</a></li>
           </ul>
-          <img src="../img/img/account_circle.svg" class="profil-picture">
+          <img src="../img/account_circle.svg" class="profil-picture">
 
         </nav>
         
@@ -31,15 +32,16 @@
         <div class="task">
             <input type="checkbox" id="task1" name="task1" class="task-checkbox" onclick="return false;">
             <div class="task-label">
-              <a href="#" class="task-title">To-Do Item 1</a>
+              <a class="task-title">To-Do Item 1</a>
               <span class="task-deadline">(Deadline: 31. März 2023)</span>
             </div>
           </div>
 
-        <div class="task-1-popup">
+        <div class="task-popup" id="popup">
           <div class="upload-container">
+            <p id="close">X</p>
             <h1>Dokument hochladen</h1>
-            <form action="#" method="post" enctype="multipart/form-data">
+            <form method="post" enctype="multipart/form-data">
               <label for="document">Wähle ein Dokument aus:</label>
               <input type="file" name="document" id="document">
               <button type="submit">Hochladen</button>
@@ -50,11 +52,26 @@
         <div class="task">
           <input type="checkbox" id="task2" name="task2" class="task-checkbox" onclick="return false;">
           <div class="task-label">
-            <a href="#" class="task-title">To-Do Item 2</a>
+            <a class="task-title">To-Do Item 2</a>
             <span class="task-deadline">(Deadline: 31. März 2023)</span>
           </div>
         </div>
 
+        <script>
+          var tasks = document.querySelectorAll('.task-label')
 
+          console.log(tasks)
+
+          tasks.forEach(function(el) {
+              el.addEventListener('click', () => {
+                  document.getElementById('popup').style.display = 'block'
+              })
+          })
+
+
+          document.getElementById('close').addEventListener('click', () => {
+              document.getElementById('popup').style.display = 'none'
+          })
+        </script>
 </body>
 </html>

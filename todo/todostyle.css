@@ -75,6 +75,7 @@
     display: flex;
     flex-direction: column;
     padding: 10px;
+    cursor: pointer;
   }
   
   .task-title {
@@ -189,11 +190,19 @@ button[type="submit"]:hover {
 	background-color: #0062cc;
 }
 
-.task-1-popup {
-  display: block;
+.task-popup {
+  display: none;
   position: absolute;
   background-color: #fff;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+#close {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 2%;
+  cursor: pointer;
 }
