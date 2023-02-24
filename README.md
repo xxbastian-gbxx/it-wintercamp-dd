@@ -1,3 +1,15 @@
+Hier sind alle Dateien für den User:
+-Login(ganz am Anfang
+
+-Homepage
+-ToDo´s
+-Technikbestellung
+-FAQ
+-Mein Profil
+
+
+
+
 <img src="https://itcamp-dd.de/wp-content/uploads/2020/10/Wintercamp-Header.png">
 <h1>Was ist das IT-Camp?</h1>
 Du wolltest schon immer mal in ein IT-Unternehmen schnuppern und Dich ausprobieren? Diesen Winter hast Du die Chance drei Unternehmen in einer Woche kennenzulernen. Nutze dazu eine Woche Deiner Winterferien und nimm Teil am IT- WinterCamp Dresden! Im Team entwickelt Ihr eine eigene Software und durchlauft alle Positionen in der Entwicklung.
