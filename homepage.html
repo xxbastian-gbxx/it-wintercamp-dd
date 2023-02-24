@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body onload="startTime()">
+    
+        <div class="topmenu">
+            <ul>
+               <li><a><img src="img2/telekomsmall.png"></a></li> 
+              <li><a href="homepage.html"><img src="img2/home.png" alt="" class="home">Home</a></li>
+              <li><a href="todo.html"><img src="img2/todos.png" alt="" class="todos">ToDos</a></li>
+              
+              <li><a href="technikbestellung.html"><img src="img2/device.png" alt="" class="device">Technik</a></li>
+    
+              <li><a href="FAQ.html"><img src="img2/faq.png" alt="" class="faq">FAQ</a></li>
+              <li><a href="https://telekom.de"><img src="img2/telekomsmall.png" class="telekom" alt="">elekom</a></li>
+              <li><a href="account2.html" class="mc"><img src="img2/myacc.png" alt="" class="myacc">Profil</a></li>
+            </ul>
+         </div>
+
+      
+     <div>
+        <p class="center_14">Willkommen bei T-Systems MMS.</p>
+     </div>    
+    <div class="center_15" id="txt">
+        
+    </div>
+    <div class="center_15" id="date"></div>
+   <script>
+    function startTime() {
+  const today = new Date();
+  let h = today.getHours();
+  let m = today.getMinutes();
+  let s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+  setTimeout(startTime, 1000);
+}
+
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+
+n =  new Date();
+y = n.getFullYear();
+m = n.getMonth() + 1;
+d = n.getDate();
+document.getElementById("date").innerHTML = d + "/" + m + "/" + y;
+   </script>
+   <div>
+      <p></p>
+   </div>
+</body>
+</html>

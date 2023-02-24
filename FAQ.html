@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ und Hilfe</title>
+</head>
+<body>
+    <div class="topmenu">
+        <ul>
+          <li><a><img src="img2/telekomsmall.png"></a></li>
+          <li><a href="homepage.html"><img src="img2/home.png" alt="" class="home">Home</a></li>
+          <li><a href="todo.html"><img src="img2/todos.png" alt="" class="todos">ToDos</a></li>
+          
+          <li><a href="technikbestellung.html"><img src="img2/device.png" alt="" class="device">Technik</a></li>
+
+          <li><a href="FAQ.html"><img src="img2/faq.png" alt="" class="faq">FAQ</a></li>
+          <li><a href="https://telekom.de"><img src="img2/telekomsmall.png" class="telekom" alt="">elekom</a></li>
+          <li><a href="account2.html" class="mc"><img src="img2/myacc.png" alt="" class="myacc">Profil</a></li>
+        </ul>
+     </div>
+
+    <link rel="stylesheet" href="FAQ.css">
+    <div id="faq" class="faq-body">
+      <div class="faq-header">
+        <h3 class="faq-title">FAQ</h3>
+        <div class="seperator"></div>
+      </div>
+      <div class="faq-list">
+          <div>
+            <details open>
+              <summary title="How can I choose the technical devices?">Wie kann ich mir die Technik heraussuchen? </summary>
+              <p class="faq-content">Schauen Sie bitte auf der Technikseite nach. Dort können Sie wählen.</p>
+            </details>
+            </div>
+          <div>
+            <details>
+              <summary title="What can I expect at my first consultation?">Was ist eine MyCard und wie aktiviere ich diese?</summary>
+              <p class="faq-content">Ihre MyCard ist eine Chipkarte mit allen Berechtigungen für Gebäude und Programmen. Diese wird von der Technikabteilung beim ersten Nutzen aktiviert und ist mit einem Passwort verschlüsselt. </p>
+            </details>
+            </div>
+          <div>
+            <details>
+              <summary title="What are your opening hours?">Wer kann mein Profil einsehen? </summary>
+              <p class="faq-content">Vorgesetzte und Ihr Pate können Ihr Profil einsehen</p>
+            </details>
+            </div>
+          <div>
+            <details>
+              <summary title="Where do I need to upload my A-levels?">Wo muss ich mein Abi einreichen?</summary>
+              <p class="faq-content">Zeugnisse und diverse Unterlagen können unter Dokumente eingereicht werden.</p>
+            </details>
+            </div>
+          <div>
+            <details>
+              <summary title="Question?">Wann und wo findet die nächste Hauptversammlung statt?</summary>
+              <p class="faq-content">Diese findet am .... statt</p>
+            </details>
+            </div>
+          <div>
+                <details>
+                    <summary title="Question?">Ich habe meine Zugangsdaten vergessen, was jetzt?</summary>
+                    <p class="faq-content">Bitte wenden Sie sich an die Technikabteilung.</p>
+                </details>
+            </div>
+            <div>
+              <details>
+                  <summary title="Question?">Wie viel ist mein Gehalt?</summary>
+                  <p class="faq-content">Ihr Gehalt beträgt .... Euro.</p>
+              </details>
+          </div>
+          <div>
+            <details>
+                <summary title="Question?">Wie kann ich die Teamassistenz kontaktierent?</summary>
+                <p class="faq-content">Die Teamassistenz finden Sie auf der Homepage</p>
+            </details>
+        </div>
+        <div>
+          <details>
+              <summary title="Question?">Wie kann ich meine Paten kontraktieren?</summary>
+              <p class="faq-content">........</p>
+          </details>
+      </div>
+      </div>
+    </div>
+</div>   
+</body>
+
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+.hero{
+  width: 100%;
+  min-height: 100vh;
+  background:#1111;
+  color:#525255;
+}
+
+nav{
+  background: #e91e63;
+  width: 100%;
+  padding: 4vh 4vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  min-height: 12vh;
+}
+
+.logo {
+  width:auto;
+  height:8vh;
+  filter:brightness(100);
+}
+
+.profil-picture{
+  width: 8vh;
+  height: 8vh;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-left: 30px;
+}
+
+nav ul{
+  width:100%;
+  text-align:left;
+}
+
+nav ul li{
+  display:inline-block;
+  list-style:none;
+  margin: 10px 15px;
+  margin-left: 30px;
+}
+
+nav ul li a{
+  color:white;
+  text-decoration:none;
+  font-size: larger;
+}
+
+    body {
+    background-color: #8a9797;
+    font-family: sans-serif;
+}
+
+.div + div {
+    clear: both;
+}
+
+.p {
+    line-height: 1.4em;
+    color: #e91e63;
+}
+
+.faq-title {
+    font-size: 2em;
+    margin: 0.4em 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.div.seperator {
+    width: 7.5em;
+    background-color: #e91e63;
+    height: 0.17em;
+    margin-left: -1.8em;
+}
+
+.faq-list > div {
+    border-bottom: 0.07em solid #070707;
+    padding: 1.5em 0em;
+} 
+
+.faq-list > div:last-child {
+    border: unset;
+}
+
+.details > summary {
+    list-style: none;
+}
+.details > summary::-webkit-details-marker {
+    display: none;
+}
+
+.summary {
+    font-size: 1.4em;
+    font-weight: bold;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none; 
+    user-select: none;
+    transition: all 0.3s ease;
+}
+
+.summary:hover {
+    color: #e91e63;
+}
+
+.details[open] summary ~ * {
+    animation: sweep .5s ease-in-out;
+}
+
+@keyframes sweep {
+    0%    {opacity: 0; margin-left: -10px}
+    100%  {opacity: 1; margin-left: 55px}
+}
+
+.details[open] summary {
+    color: #e91e63;
+}
+
+.details[open] p {
+    border-left: 2px solid #e91e63;
+    margin-left: 55px;
+    padding-left: 25px;
+    opacity: 100;
+    transition: all 3s ease;
+}
+
+.details[open] summary:after {
+    content: "-";
+    font-size: 3.2em;
+    margin: -33px 0.35em 0 0;
+    font-weight: 200;
+}
+
+.faq-body {
+    width: 70em;
+    margin: 4em auto;
+    box-shadow: 0px 0px 16px #181617;
+    border-radius: 0.2em;
+    padding: 5em;
+    background-color: #e91e63;
+}
+
+.faq-list {
+    width: 55em;
+    margin: 1em auto;
+    padding: 2em 0;
+}
+
+.summary::-webkit-details-marker {
+    display: none;
+}
+
+.summary:after {
+    background: transparent;
+    border-radius: 0.3em;
+    content: "+";
+    color: #e9208e;
+    float: left;
+    font-size: 1.8em;
+    font-weight: bold;
+    margin: -0.3em 0.65em 0 0;
+    padding: 0;
+    text-align: center;
+    width: 25px;
+}
+
+div {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #070707;
+ }
+</style>
+
+</html>
