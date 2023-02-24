@@ -1,4 +1,4 @@
-/*Struktur des Json für und von der Datenbank
+/* Struktur des Json für und von der Datenbank */
 var json = [
    {
       "ID":2,
@@ -13,12 +13,11 @@ var json = [
       "Passwort":"1.04.2006"   
    }
    ]
-*/
 
-/*Modul um die eingetragen Daten des Admins für den User im Script in ein Json Object zu speichern
+
+/* Modul um die eingetragen Daten des Admins für den User im Script in ein Json Object zu speichern */
 const submitbutton = document.getElementById("submit");
 submitbutton.addEventListener("click", function(event) {
-IDnewdata = document.getElementById("input1").value;
 Vornamenewdata = document.getElementById("input2").value;
 Nachnamenewdata = document.getElementById("input3").value;
 Telefonnumbernewdata = document.getElementById("input4").value;
@@ -31,7 +30,6 @@ Passwortnewdata = document.getElementById("input10").value;
 
 let internalFormularJson = [
     {
-        "ID": IDnewdata,
         "Vorname": Vornamenewdata,
         "Nachname": Nachnamenewdata,
         "Telefonnumber": Telefonnumbernewdata,
@@ -43,13 +41,11 @@ let internalFormularJson = [
         "Passwort": Passwortnewdata
     }
 ]
-console.log(internalFormularJson);
+console.log(internalFormularJson[0]);
 });
-*/ 
-/*Modul um die relevanten USerDaten für den User bereit zu stellen aus dem Json Object
+ 
+/* Modul um die relevanten USerDaten für den User bereit zu stellen aus dem Json Object */
 window.onload = function getJSONData(){
-   let IDData = json[0].ID;
-   document.getElementById("ID").innerHTML = IDData;
    let VornameData = json[0].Vorname;
    document.getElementById("Vorname").innerHTML = VornameData;   
    let NachnameData = json[0].Nachname;
@@ -69,9 +65,9 @@ window.onload = function getJSONData(){
    let PasswortData = json[0].Passwort;
    document.getElementById("Passwort").innerHTML = PasswortData;
 }
-*/
-/*Modul um die angegebenen Anmeldedaten des Users in ein Json Object zu speichern,
- um diese dann überprüfen zu können
+
+/* Modul um die angegebenen Anmeldedaten des Users in ein Json Object zu speichern,
+ um diese dann überprüfen zu können */
 var loginbutton = document.getElementById("login");
 loginbutton.addEventListener("click", function(event) {
 event.preventDefault();
@@ -79,11 +75,14 @@ var username = document.getElementById("user_email").value;
 var password = document.getElementById("user_password").value;
 
 var datajson = [
-{username: password}];
+{'username': username,
+ 'password' : password}];
+
+console.log(datajson[0])
 });
-*/
-/*Modul um häufige Teile im Html über Js zu laden
-fetch('fusszeile.html')
+
+
+/* Modul um häufige Teile im Html über Js zu laden */
+/* fetch('fusszeile.html')
 .then(response => response.text())
-.then(text => document.getElementById('footer').innerHTML = text);
-*/
+.then(text => document.getElementById('footer').innerHTML = text); */
