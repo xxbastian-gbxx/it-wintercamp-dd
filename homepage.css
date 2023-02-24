@@ -1,0 +1,56 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+  }
+  
+  .hero{
+    width: 100%;
+   
+    background:#1111;
+    color:#525255;
+  }
+  
+  nav{
+    background: #e91e63;
+    width: 100%;
+    padding: 4vh 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    min-height: 12vh;
+  }
+  
+  .logo {
+    width:auto;
+    height:8vh;
+    filter:brightness(100);
+  }
+  
+  .profil-picture{
+    width: 8vh;
+    height: 8vh;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 30px;
+  }
+  
+  nav ul{
+    width:100%;
+    text-align:left;
+  }
+  
+  nav ul li{
+    display:inline-block;
+    list-style:none;
+    margin: 10px 15px;
+    margin-left: 30px;
+  }
+  
+  nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-size: larger;
+  }
